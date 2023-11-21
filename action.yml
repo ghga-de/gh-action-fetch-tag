@@ -18,7 +18,7 @@ description: "Return the latest tag of repository"
 outputs:
   latest_tag:
     description: "Latest tag of repository"
-    value: ${{ steps.get_tag.outputs.LATEST_TAG }}
+    value: ${{ steps.get_tag.outputs.latest_tag }}
 runs:
   using: composite
   steps:
