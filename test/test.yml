@@ -1,0 +1,17 @@
+name: Test action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test_action:
+    runs-on: ubuntu-latest
+    name: Install and test action
+    steps:
+    - uses: actions/checkout@v3
+    - name: Test locally
+      id: fetch_tag
+      uses: ./
+    - name: Test locally
+      run: |
+        echo latest tag is ${{ steps.fetch_tag.outputs.latest_tag }}
