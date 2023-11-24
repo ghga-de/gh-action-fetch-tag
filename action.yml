@@ -24,6 +24,9 @@ runs:
   steps:
     - name: Check out code
       uses: actions/checkout@v3
+      with:
+        fetch-depth: "0"
+
     - name: Get the latest SemVer tag
       shell: bash
       id: get_tag
